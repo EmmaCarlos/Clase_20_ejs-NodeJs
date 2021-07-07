@@ -29,6 +29,8 @@ module.exports= {
     }),
     detalleMenu:(req,res)=> res.render("detalleMenu",{
         title:"Home",
-        })
+        plato: req.params.idDetalle ? menu.filter(element=> element.id == req.params.idDetalle): menu,
+        styles:"../css/style.css"
+    })
     
 }
